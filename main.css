@@ -1,17 +1,211 @@
-.product-item {
-	background-color: gray;
-	display: inline-block;
-	height: 25px;
-	padding: 5px;
-	border-radius: 5px;
+.bl-background {
+    
+    display: flex;
 }
 
-.amount {
-	background-color: yellow;
-	border-radius: 10px;
-	
-	display: inline-block;
-	height: 20px;
-	width: 20px;
-	text-align: center;
+.bl-list {
+   
 }
+.white-container
+{
+    background: white;
+    margin: 10pt;
+    border-radius: 3pt;
+    box-shadow: 0 0 5pt rgb(83, 83, 83);
+}
+
+/*Кнопки*/
+
+
+.container
+{
+    margin: auto;
+    display: inline-flex;
+    margin-top: 70pt;
+}
+
+body
+{
+    font-family: Helvetica, sans-serif;   
+    background: #DADADA;
+    margin: 0;
+}
+.form-block
+{
+    margin: 7pt;
+    height:20pt;
+    display: flex;
+}
+
+.good-input
+{
+    border-radius: 3pt 0 0 3pt;
+    width: 300pt;
+    font-weight: normal;
+    border: 1px solid lightgray;
+    padding: 0;
+    margin: 0;
+    height: 20pt;
+    vertical-align: middle;
+    flex-direction: right;
+}
+
+.commit-button
+{
+    margin-left: 0;
+    border-radius: 0 3pt 3pt 0;
+    border: 0;
+    background-color: #2185D0;
+    height: 22pt;
+    width: 60pt;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    color: white;
+    
+}
+button
+{
+    border-radius: 3pt;
+    background-color: #E8E8E8;
+    box-shadow: 0 -3pt 0 0 rgba(37, 39, 41, 0.15) inset;
+}
+::selection {
+    background-color: #CCE2FF;
+}
+
+.bl-plus
+{
+    border-radius: 10pt;
+    color: #FFF;
+    background: #21BA45;
+    width: 20pt;
+    height: 20pt;
+    border: 0;
+}
+
+
+.bl-minus
+{
+    border-radius: 10pt;
+    color: #FFF;
+    background-color: #DB2828;
+    width: 20pt;
+    height: 20pt;
+    border: 0;
+}
+.bl-bought
+{
+
+}
+
+.bl-label
+{
+    padding: 3pt;
+    padding-left: 6pt;
+    padding-right: 6pt;
+    background: #cdcbcb;
+    border-radius: 5pt;
+}
+
+.bl-row
+{
+    display: flex;
+    margin: 10pt;
+}
+
+.bl-product
+{
+    text-align: left;
+    margin: auto;
+    margin-left: 3pt;
+    margin-right: 0;
+    width: 50pt;
+    
+}
+
+.bl-bought
+{
+    width: 130pt;
+
+}
+
+.bl-count
+{
+    margin:auto;
+}
+.close-button
+{
+    background-color: red;
+    width: 20pt;
+    height: 20pt;
+    text-align: center;
+    color: white;
+    margin-left: 5pt;
+    border-color: lightgray;
+    border: 0;
+}
+
+.bought-button
+{
+    border-color: lightgray;
+    border-width: 1px;
+}
+
+.good
+{
+    height: 20pt;
+    margin-bottom: 10pt;
+    border-color: gray;
+    border-width: 10px;
+
+}
+.bl-title
+{
+    
+    margin-bottom: 10pt;
+    margin-top: 10pt;
+    margin: auto;
+    text-align: center;
+
+}
+.elements
+{
+    height: 40pt;
+    margin:10pt;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+}
+
+hr
+{
+}
+.element
+{
+    display: inline-flex;
+    font-size: 10pt;
+    background-color: #E8E8E8;
+    padding:3pt;
+    border-radius: 3pt;
+    margin:1pt;
+}
+
+.bought
+{
+    text-decoration: line-through;
+}
+
+.amount
+{
+    margin:auto;
+    margin-left: 1pt;
+    padding-left:3pt;
+    padding-right: 3pt;
+    border-radius: 10pt;
+    background-color: #F2711C;
+    color:white;
+
+}
+
+
+

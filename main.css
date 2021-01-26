@@ -82,6 +82,8 @@ button
     width: 20pt;
     height: 20pt;
     border: 0;
+    text-align: center;
+    position: relative;
 }
 
 
@@ -93,10 +95,7 @@ button
     width: 20pt;
     height: 20pt;
     border: 0;
-}
-.bl-bought
-{
-
+    text-align: center;
 }
 
 .bl-label
@@ -177,9 +176,6 @@ button
     margin-bottom: 5pt;
 }
 
-hr
-{
-}
 .element
 {
     display: inline-flex;
@@ -188,6 +184,7 @@ hr
     padding:3pt;
     border-radius: 3pt;
     margin:1pt;
+    height: 10pt;
 }
 
 .bought
@@ -207,5 +204,127 @@ hr
 
 }
 
+.bought-elements
+{
+    display: flex;
+    
+}
+
+.buy-list-text
+{
+    margin-top: 10pt;
+    text-align: left;
+    padding-left: 14pt;
+}
+.created-by
+{
+    margin-top: 15pt;
+    font-size: 8pt;
+    text-align: left;
+    padding-left: 14pt;
+}
+
+.buy-list
+{
+    position: fixed; 
+    bottom: 0px;
+    color:white;
+    background-color: darkviolet;
+    border:0;
+    border-radius:  10pt 10pt 0 0;
+    height: 40pt;
+    font-size: 15pt;
+    margin-left: 30pt;
+    width: 85pt;
+    transition: 1s;
+}
+
+.buy-list:hover
+{   
+    background-color: blue;
+    height: 70pt;
+
+    transition: 1s linear;
+}
+.author
+{
+    font-size: 11pt;
+    text-align: left;
+    padding-left: 14pt;
+}
 
 
+@media (max-width: 500px) {
+    .container
+    {
+        display:inline-grid;
+    }
+    .bl-bought
+    {
+        width: auto;
+    }
+    .bl-list
+    {
+        width: 300pt;
+    }
+ }
+ @media print
+{
+    .buy-list:before {
+        font-size: 12pt;
+        padding-left: 5pt;
+        content: "Created by Husar Kyrylo";
+      }
+    .buy-list
+    {
+        border: 1px solid #909;
+        background-color: white;
+        color: black;
+        
+    }
+    .buy-list #visible {
+        visibility: hidden;
+        position: relative;
+    }
+       .buy-list #visible:after{
+        background-color: white!Important;
+        color: black!Important;
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+    }
+
+    .buy-list-text
+    {
+        visibility: hidden;
+        color:black;
+    }
+}
+
+[data-tooltip] 
+{
+    position: relative;
+}
+[data-tooltip]::after 
+{
+    content: attr(data-tooltip);
+    position: absolute;
+    width: 0pt;
+    bottom:0;
+    background: darkviolet; 
+    border-radius: 10pt;
+    color: white;
+    padding: 0.5em;
+    transition: 1s;
+    opacity: 0;
+    z-index: 2;
+} 
+[data-tooltip]:hover::after 
+{
+    bottom: 2em; 
+    width: 70pt;
+    opacity: 1;
+    z-index: 1;
+}

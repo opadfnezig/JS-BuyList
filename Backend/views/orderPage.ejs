@@ -1,0 +1,61 @@
+<% include common/header.ejs %>
+
+<div id="order_list" class = "col-lg-3 col-md-4 col-sm-5 col-xs-6">
+    <div class = "title-container">
+        <span>
+            Замовлення
+            <div id = "number-order">3</div>
+        </span>
+    </div>
+    <div id = "main-container" class = "order-main-container">
+
+    </div>
+    <div class = "footer-container">
+        <div style = "padding:10px 0 10px 0;">
+            <span style = "font-size: 16px; font-weight: bold; margin-right: 5px;">Сума замовлення:</span>
+            <span id = "price-field" style = "font-size: 20px; font-weight: bold; position: absolute; right: 5px">924 грн</span>
+        </div>
+        <a href = "/" class = "btn change order-btn">Змінити</a>
+    </div>
+</div>
+
+<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6 p-5">
+    <h2>1. Контактні дані</h2>
+    <form>
+        <div class="form-group">
+            <label for="nameInput">Ім'я</label>
+            <input type="text" name = "name" class="form-control" id="nameInput" placeholder="Ім'я Фамілія">
+            <label id="nameError"></label>
+        </div>
+        <div class="form-group">
+            <label for="phoneInput">Телефон</label>
+            <input type="tel" name = "phone" class="form-control" id="phoneInput" placeholder="+380991234567">
+            <label id="phoneError"></label>
+        </div>
+        <div class="form-group">
+            <label for="addressInput">Адреса</label>
+            <input type="text" name = "address" class="form-control" id="addressInput" placeholder="проспект Степана Бандери, 13, Київ, Україна, 02000">
+            <label id="addressError"></label>
+        </div>
+    </form>
+    <div class="info-container p-4">
+        <h4>Інформація про замовлення</h4>
+        <div class="d-flex">
+            <h6>Приблизний час доставки:</h6>
+            <h6 id="timeOrder" style = "font-weight: normal; padding-left: 5px">невідомо</h6>
+        </div>
+        <div class="d-flex">
+            <h6>Адреса доставки:</h6>
+            <h6 id="addressOrder" style = "font-weight: normal; padding-left: 5px">невідомо</h6>
+        </div>
+        <button id = "submit-order" class = "btn btn-warning m-2">Далі</button>
+    </div>
+
+    <div id = "googleMap"
+    style = "margin-top: 20px; width:100%; height:500px;"></div>
+</div>
+
+
+<div id="liqpay"></div>
+
+<% include common/footer.ejs %>

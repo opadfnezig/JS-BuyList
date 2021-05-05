@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title><%= pageTitle %> - Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+
+</head>
+<body>
+<nav id = "header" class="navbar sticky-top p-0 navbar-expand col-lg-9 col-md-8 col-sm-7 col-xs-6">
+    <div class="logo">
+        <span class="pizza-logo">PIZZA</span>
+        <span class="kma">KMA</span>
+        <img style="width: 80px; transform: rotate(180deg); margin-top: 14px; margin-left: -1px;" src="assets/images/discount.svg">
+    </div>
+    <div class="navbar-content">
+        <div class="top d-flex">
+            <div class="navbar-nav mr-auto">
+                <span class="nav-text">(044) 222 5 222</span>
+                <span class="nav-text d-none d-md-block">24 години/7 днів на тиждень</span>
+                <span class="nav-text d-none d-lg-block">Безплатне доставляння піци</span>
+            </div>
+            <button class="btn btn-warning d-none d-sm-block">Ввійти</button>
+        </div>
+        <hr class="line">
+        <div class="bottom d-flex">
+            <div class="navbar-nav mr-auto">
+                <span class="nav-text d-none d-sm-block mr-auto">Піца</span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+

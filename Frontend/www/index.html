@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+
+</head>
+<body>
+<nav id = "header" class="navbar sticky-top p-0 navbar-expand col-lg-9 col-md-8 col-sm-7 col-xs-6">
+    <div class="logo">
+        <span class="pizza-logo">PIZZA</span>
+        <span class="kma">KMA</span>
+        <img style="width: 80px; transform: rotate(180deg); margin-top: 14px; margin-left: -1px;" src="assets/images/discount.svg">
+    </div>
+    <div class="navbar-content">
+        <div class="top d-flex">
+            <div class="navbar-nav mr-auto">
+                <span class="nav-text">(044) 222 5 222</span>
+                <span class="nav-text d-none d-md-block">24 години/7 днів на тиждень</span>
+                <span class="nav-text d-none d-lg-block">Безплатне доставляння піци</span>
+            </div>
+            <button class="btn btn-warning d-none d-sm-block">Ввійти</button>
+        </div>
+        <hr class="line">
+        <div class="bottom d-flex">
+            <div class="navbar-nav mr-auto">
+                <span class="nav-text d-none d-sm-block mr-auto">Піца</span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="order_list" class = "col-lg-3 col-md-4 col-sm-5 col-xs-6">
+    <div class = "title-container">
+        <span>
+            Замовлення
+            <div id = "number-order">3</div>
+        </span>
+        <button id = "delete_all_orders" class = "btn btn-default">Очистити замовлення</button>
+    </div>
+    <div id = "main-container">
+
+    </div>
+    <div class = "footer-container">
+        <div style = "padding:10px 0 10px 0;">
+            <span style = "font-size: 16px; font-weight: bold; margin-right: 5px;">Сума замовлення:</span>
+            <span id = "price-field" style = "font-size: 20px; font-weight: bold; position: absolute; right: 5px">924 грн</span>
+        </div>
+        <a class = "btn btn-warning">Замовлення</a>
+    </div>
+</div>
+
+<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6 container-grid">
+    <div class = "d-flex justify-content-center p-3">
+        <span style = "font-size: 30px">Усі піци</span>
+        <div id = "number-pizza">3</div>
+    </div>
+    <div class = "sort-btn d-flex justify-content-center p-3">
+        <button class = "btn btn-warning m-1" id = "sort-all"> Усі </button>
+        <button class = "btn btn-warning m-1" id = "sort-meat"> М'ясні </button>
+        <button class = "btn btn-warning m-1" id = "sort-chicken"> З куркою </button>
+        <button class = "btn btn-warning m-1" id = "sort-pineapple"> З ананасами </button>
+        <button class = "btn btn-warning m-1" id = "sort-mushroom"> З грибами </button>
+        <button class = "btn btn-warning m-1" id = "sort-seafood"> З морепродуктами </button>
+        <button class = "btn btn-warning m-1" id = "sort-vega"> Вега </button>
+    </div>
+
+    <div class="row" id="pizza_list">
+        <div class="col-sm-12 col-md-6 col-lg-4 p-3">
+            <div class="card pizza-card">
+                <img class="card-img-top" src="assets/images/pizza_1.jpg">
+                <div class = "card-body">
+                    <div class="caption d-flex flex-column ">
+                        <span class = "new">Нова</span>
+                        <h3>Thumbnail label</h3>
+                        <div class = "type">Мясна піца</div>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                        <div class = "price-container d-flex justify-content-around mt-auto">
+                            <div class = "title-size">
+                                <div>
+                                    <img src = "assets/images/size-icon.svg">
+                                    30
+                                </div>
+                                <div>
+                                    <img src = "assets/images/weight.svg">
+                                    370
+                                </div>
+                                <h2>99</h2>
+                                <h6>грн.</h6>
+                                <button class = "btn btn-warning">Купити</button>
+                            </div>
+                            <div class = "title-size">
+                                <div>
+                                    <img src = "assets/images/size-icon.svg">
+                                    30
+                                </div>
+                                <div>
+                                    <img src = "assets/images/weight.svg">
+                                    370
+                                </div>
+                                <h2>99</h2>
+                                <h6>грн.</h6>
+                                <button class = "btn btn-warning">Купити</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 p-3">
+            <div class="card pizza-card">
+                <img class="card-img-top" src="assets/images/pizza_2.jpg">
+                <div class = "card-body">
+                    <div class="caption d-flex flex-column ">
+                        <span class = "popular">Популярна</span>
+                        <h3>Thumbnail label</h3>
+                        <div class = "type">Мясна піца</div>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                        <div class = "price-container d-flex justify-content-around mt-auto">
+                            <div class = "title-size">
+                                <div>
+                                    <img src = "assets/images/size-icon.svg">
+                                    30
+                                </div>
+                                <div>
+                                    <img src = "assets/images/weight.svg">
+                                    370
+                                </div>
+                                <h2>99</h2>
+                                <h6>грн.</h6>
+                                <button class = "btn btn-warning">Купити</button>
+                            </div>
+                            <div class = "title-size">
+                                <div>
+                                    <img src = "assets/images/size-icon.svg">
+                                    30
+                                </div>
+                                <div>
+                                    <img src = "assets/images/weight.svg">
+                                    370
+                                </div>
+                                <h2>99</h2>
+                                <h6>грн.</h6>
+                                <button class = "btn btn-warning">Купити</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 p-3">
+            <div class="card pizza-card">
+                <img class="card-img-top" src="assets/images/pizza_3.jpg">
+                <div class = "card-body">
+                    <div class="caption d-flex flex-column">
+                        <h3>Thumbnail label</h3>
+                        <div class = "type">Мясна піца</div>
+                        <p> at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                        <div class = "price-container d-flex justify-content-around mt-auto">
+                            <div class = "title-size">
+                                <div>
+                                    <img src = "assets/images/size-icon.svg">
+                                    30
+                                </div>
+                                <div>
+                                    <img src = "assets/images/weight.svg">
+                                    370
+                                </div>
+                                <h2>99</h2>
+                                <h6>грн.</h6>
+                                <button class = "btn btn-warning">Купити</button>
+                            </div>
+                            <div class = "title-size">
+                                <div>
+                                    <img src = "assets/images/size-icon.svg">
+                                    30
+                                </div>
+                                <div>
+                                    <img src = "assets/images/weight.svg">
+                                    370
+                                </div>
+                                <h2>99</h2>
+                                <h6>грн.</h6>
+                                <button class = "btn btn-warning">Купити</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id = "bottom-text" class = "col-lg-9 col-md-8 col-sm-7 col-xs-6">
+</div>
+
+<div id = "discount">
+    <img src = "assets/images/discount.svg">
+    <div class = "container">
+        <div style = "border-bottom: 2px dotted #d16200;">Цього тижння на все</div>
+        <div>-20%</div>
+    </div>
+</div>
+
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<script type="text/javascript"  src="assets/js/main.js"> </script>
+</body>
+</html>

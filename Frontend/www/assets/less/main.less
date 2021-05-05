@@ -1,0 +1,47 @@
+@mainColor: #ea862e;
+
+@import "pizza/pizza-card";
+@import "header";
+@import "order_list";
+@import "order_page";
+
+body {
+  background: antiquewhite;
+}
+
+@media(max-width:577px) {
+  #order_list {
+    display: none;
+  }
+}
+
+#discount {
+  position: fixed;
+  bottom: 0;
+  left: 6px;
+
+  img {
+    margin-top: 11px;
+    width: 80px;
+  }
+
+  .container {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+
+    background: #ea862e;
+    width:80px;
+  }
+}
+
+#bottom-text {
+  z-index: -1;
+  padding-top: 30px;
+  height: 120px;
+
+  color: gray;
+  font-size: 14px;
+  text-align: center;
+  background: white;
+}
